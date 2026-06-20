@@ -2,154 +2,87 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: Arial;
 }
 
 body {
-  height: 100vh;
-  overflow: hidden;
   background: linear-gradient(135deg, #6a11cb, #2575fc, #ff4ecd);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   color: white;
 }
 
-/* ORBS BACKGROUND */
-.orb {
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.6;
-}
-
-.orb1 {
-  width: 300px;
-  height: 300px;
-  background: #ff4ecd;
-  top: 10%;
-  left: 10%;
-}
-
-.orb2 {
-  width: 250px;
-  height: 250px;
-  background: #4facfe;
-  bottom: 10%;
-  right: 10%;
-}
-
-.orb3 {
-  width: 200px;
-  height: 200px;
-  background: #a18cd1;
-  top: 50%;
-  left: 50%;
-}
-
-/* MAIN CONTAINER */
-.container {
+/* HERO */
+.hero {
   display: flex;
-  width: 90%;
-  max-width: 1200px;
   justify-content: space-between;
   align-items: center;
-  z-index: 2;
-}
-
-/* LEFT SIDE */
-.left {
-  flex: 1;
+  height: 100vh;
+  padding: 0 60px;
 }
 
 .left h1 {
   font-size: 3rem;
-  font-weight: 800;
 }
 
 .left span {
   color: yellow;
 }
 
-.left h2 {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  font-weight: 400;
-}
-
-.left p {
-  margin-top: 15px;
-  opacity: 0.8;
-}
-
-/* BUTTON */
-.btn {
-  margin-top: 25px;
-  padding: 12px 25px;
+.left button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 25px;
   border: none;
-  border-radius: 30px;
-  font-weight: bold;
   cursor: pointer;
-  background: rgba(255,255,255,0.2);
-  backdrop-filter: blur(10px);
-  color: white;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.3);
 }
 
-.btn:hover {
-  transform: scale(1.1);
-  background: white;
-  color: black;
+/* GIF */
+.right img {
+  width: 300px;
+  border-radius: 20px;
+  animation: float 3s infinite ease-in-out;
 }
 
-/* RIGHT SIDE */
-.right {
-  flex: 1;
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0); }
+}
+
+/* SECTIONS */
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/* SKILLS GRID */
+.grid {
   display: flex;
   justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.right iframe {
-  width: 400px;
-  height: 400px;
-  border-radius: 20px;
-  border: 1px solid rgba(255,255,255,0.3);
-  backdrop-filter: blur(10px);
+.grid div {
+  background: rgba(255,255,255,0.2);
+  padding: 10px 15px;
+  border-radius: 10px;
 }
 
-/* ANIMATIONS */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeUp 1s forwards;
+/* PROJECT CARDS */
+.card {
+  background: rgba(0,0,0,0.3);
+  margin: 10px auto;
+  padding: 15px;
+  width: 60%;
+  border-radius: 15px;
 }
 
-.delay1 { animation-delay: 0.2s; }
-.delay2 { animation-delay: 0.4s; }
-.delay3 { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  body {
-    overflow: auto;
-  }
-
-  .container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .right iframe {
-    width: 300px;
-    height: 300px;
-    margin-top: 20px;
-  }
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
 }
