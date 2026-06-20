@@ -1,72 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <!-- HERO -->
-  <header class="hero">
-    <h1>Hi, I'm <span>Nikita Patil</span></h1>
-    <p>Web Developer | Student | Learner |Problem solver</p>
-    <a href="#projects" class="btn">View Projects</a>
-  </header>
+  <!-- BACKGROUND ORBS -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
 
-  <!-- ABOUT -->
-  <section class="section">
-    <h2>About Me</h2>
-    <p>
-      I am a web developer who loves building clean and responsive websites.
-      I am currently learning full-stack development and improving my skills daily.
-    </p>
-  </section>
+  <div class="container">
 
-  <!-- SKILLS -->
-  <section class="section">
-    <h2>Skills</h2>
-    <div class="skills">
-      <div>HTML</div>
-      <div>CSS</div>
-      <div>JavaScript</div>
-      <div>Python</div>
-      <div>Git</div>
-      <div>GitHub</div>
-    </div>
-  </section>
+    <!-- LEFT SIDE -->
+    <div class="left">
+      <h1 class="fade-in">Hi, I'm <span>Nikita Patil</span></h1>
 
-  <!-- PROJECTS -->
-  <section class="section" id="projects">
-    <h2>Projects</h2>
+      <h2 class="fade-in delay1">Web Developer</h2>
 
-    <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Responsive personal portfolio website.</p>
+      <p class="fade-in delay2">
+        I build modern, responsive and creative web experiences
+      </p>
+
+      <button class="btn fade-in delay3">
+        View My Work
+      </button>
     </div>
 
-    <div class="card">
-      <h3>Todo App</h3>
-      <p>Task manager using JavaScript.</p>
+    <!-- RIGHT SIDE (3D MODEL) -->
+    <div class="right fade-in delay2">
+
+      <!-- Replace this with your Spline link -->
+      <iframe 
+        src="https://my.spline.design/placeholder"
+        frameborder="0">
+      </iframe>
+
     </div>
 
-    <div class="card">
-      <h3>Weather App</h3>
-      <p>Real-time weather using API.</p>
-    </div>
-  </section>
+  </div>
 
-  <!-- CONTACT -->
-  <section class="section">
-    <h2>Contact</h2>
-    <p>Email: nikitapatil930959@gmail.com</p>
-  </section>
-
-  <footer>
-    <p>© 2026 Nikita patil | Built with ❤️</p>
-  </footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
