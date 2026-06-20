@@ -2,82 +2,75 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Inter', sans-serif;
+  font-family: Arial;
 }
 
 body {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  height: 100vh;
+  background: linear-gradient(135deg, #6a11cb, #2575fc, #ff4ecd);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
+  overflow: hidden;
 }
 
-/* MAIN */
+/* MAIN CONTAINER */
 .container {
-  width: 85%;
-  margin: auto;
-  padding-top: 40px;
-}
-
-/* HERO */
-.hero {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 60px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
+  width: 80%;
 }
 
-.hero h1 {
+/* LEFT */
+.left h1 {
   font-size: 3rem;
 }
 
-.hero span {
-  color: #38bdf8;
+.left span {
+  color: yellow;
 }
 
-.hero button {
+.left button {
   margin-top: 15px;
   padding: 10px 20px;
-  border-radius: 25px;
   border: none;
+  border-radius: 25px;
   cursor: pointer;
-  background: #38bdf8;
-  color: black;
-  font-weight: bold;
 }
 
-/* IMAGE */
-.image img {
-  width: 250px;
+/* RIGHT */
+.right {
+  text-align: center;
+}
+
+.right img {
+  width: 300px;
   border-radius: 20px;
-  animation: float 3s infinite ease-in-out;
+  animation: float 3s ease-in-out infinite;
 }
 
+.right h3 {
+  margin-top: 10px;
+}
+
+/* FLOAT ANIMATION */
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+  50% { transform: translateY(-20px); }
   100% { transform: translateY(0); }
 }
 
-/* CARD */
-.card {
-  margin-top: 20px;
-  padding: 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
-}
+/* MOBILE */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
 
-/* GRID */
-.grid {
-  display: flex;
-  gap: 10px;
-  margin-top: 20px;
-}
-
-.grid div {
-  padding: 10px;
-  background: rgba(255,255,255,0.1);
-  border-radius: 10px;
+  .right img {
+    width: 250px;
+    margin-top: 20px;
+  }
 }
