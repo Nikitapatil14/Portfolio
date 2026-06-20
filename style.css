@@ -2,12 +2,19 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, #6a11cb, #2575fc, #ff4ecd);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: white;
+}
+
+/* MAIN */
+.container {
+  width: 85%;
+  margin: auto;
+  padding-top: 40px;
 }
 
 /* HERO */
@@ -15,74 +22,62 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
-  padding: 0 60px;
+  padding: 60px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
 }
 
-.left h1 {
+.hero h1 {
   font-size: 3rem;
 }
 
-.left span {
-  color: yellow;
+.hero span {
+  color: #38bdf8;
 }
 
-.left button {
-  margin-top: 20px;
+.hero button {
+  margin-top: 15px;
   padding: 10px 20px;
   border-radius: 25px;
   border: none;
   cursor: pointer;
+  background: #38bdf8;
+  color: black;
+  font-weight: bold;
 }
 
-/* GIF */
-.right img {
-  width: 300px;
+/* IMAGE */
+.image img {
+  width: 250px;
   border-radius: 20px;
   animation: float 3s infinite ease-in-out;
 }
 
 @keyframes float {
   0% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
+  50% { transform: translateY(-10px); }
   100% { transform: translateY(0); }
 }
 
-/* SECTIONS */
-.section {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.section h2 {
-  margin-bottom: 20px;
-}
-
-/* SKILLS GRID */
-.grid {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.grid div {
-  background: rgba(255,255,255,0.2);
-  padding: 10px 15px;
-  border-radius: 10px;
-}
-
-/* PROJECT CARDS */
+/* CARD */
 .card {
-  background: rgba(0,0,0,0.3);
-  margin: 10px auto;
-  padding: 15px;
-  width: 60%;
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   border-radius: 15px;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
+/* GRID */
+.grid {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.grid div {
+  padding: 10px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
 }
